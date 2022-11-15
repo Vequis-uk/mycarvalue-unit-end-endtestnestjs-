@@ -5,7 +5,6 @@ import { AppModule } from './../src/app.module';
 
 describe('Authentication System (e2e)', () => {
   let app: INestApplication;
-  const email = 'asd@asd.com';
 
   beforeEach(async () => {
     const moduleFixture: TestingModule = await Test.createTestingModule({
@@ -17,6 +16,8 @@ describe('Authentication System (e2e)', () => {
   });
 
   it('handles a sign up request', () => {
+    const email = 'asd@asd.com';
+    
     return request(app.getHttpServer())
       .post('/auth/signup')
       .send({ email, password: 'endtoend' })
