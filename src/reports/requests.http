@@ -1,0 +1,12 @@
+POST http://localhost:3000/reports
+Content-Type: application/json
+
+{
+    "price": 69000,
+    "make": "Mazda",
+    "model": "RX7",
+    "year": 1994,
+    "lng": 6,
+    "lat": 9,
+    "mileage": 69000
+}
